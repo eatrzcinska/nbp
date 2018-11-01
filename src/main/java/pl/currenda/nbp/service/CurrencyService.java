@@ -7,7 +7,6 @@ import org.json.simple.parser.ParseException;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import pl.currenda.nbp.model.Currency;
-
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.ArrayList;
@@ -18,7 +17,7 @@ import java.util.Map;
 @Service
 public class CurrencyService {
 
-    RestTemplate restTemplate = new RestTemplate();
+    private RestTemplate restTemplate = new RestTemplate();
 
     public String createUrl(String code, String start, String finish) {
         StringBuilder url = new StringBuilder();
